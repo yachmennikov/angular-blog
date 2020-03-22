@@ -3,6 +3,8 @@ import { CommonModule} from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+// side modules
+import { QuillModule} from 'ngx-quill';
 // custom modules
 import { AdminLayoutComponent } from './shared/components/admin-layout/admin-layout.component';
 import { LoginPageComponent } from './login-page/login-page.component';
@@ -18,6 +20,7 @@ import { AuthGuard } from './shared/services/auth.guard';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    QuillModule.forRoot(),
     RouterModule.forChild([
       { path: '', component: AdminLayoutComponent, children: [
         { path: '', redirectTo: '/admin/login', pathMatch: 'full' },
