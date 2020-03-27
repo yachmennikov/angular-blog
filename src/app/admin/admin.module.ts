@@ -13,6 +13,7 @@ import { CreatePageComponent } from './create-page/create-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { AuthService } from '../admin/shared/services/auth.service';
 import { AuthGuard } from './shared/services/auth.guard';
+import { SearchPipe } from '../search.pipe';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { AuthGuard } from './shared/services/auth.guard';
     LoginPageComponent,
     DashboardPageComponent,
     CreatePageComponent,
-    EditPageComponent
+    EditPageComponent,
+    SearchPipe
   ],
   providers: [ AuthService, AuthGuard ]
 })
